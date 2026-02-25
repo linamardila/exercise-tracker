@@ -5,8 +5,8 @@ import DurationExercise from "./components/DurationExercise";
 
 const exercises = [
   { name: "Push Ups", type: "repetition" },
-  { name: "Running", type: "duration" },
-  { name: "Plank", type: "duration" },
+  { name: "Running", type: "duration", duration: 480 },
+  { name: "Plank", type: "duration", duration: 60 },
 ];
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <button className="back-btn" onClick={() => setSelected(null)}>‹</button>
         {selected.type === "repetition"
           ? <RepetitionExercise name={selected.name} />
-          : <DurationExercise name={selected.name} />}
+          : <DurationExercise name={selected.name} duration={selected.duration} />}
       </div>
     );
   }

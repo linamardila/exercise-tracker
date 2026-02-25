@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import "../../App.css";
 
-function DurationExercise({ name }) {
-  const [seconds, setSeconds] = useState(30);
+function DurationExercise({ name, duration = 30 }) {
+  const [seconds, setSeconds] = useState(duration);
   const [running, setRunning] = useState(false);
   const intervalRef = useRef(null);
 
-  const goal = 30;
+  const goal = duration;
   const radius = 80;
   const circumference = 2 * Math.PI * radius;
   const progress = seconds / goal;
@@ -36,7 +36,7 @@ function DurationExercise({ name }) {
 
   const reset = () => {
     setRunning(false);
-    setSeconds(30);
+    setSeconds(duration);
   };
 
   return (
