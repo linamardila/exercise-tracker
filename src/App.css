@@ -1,68 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Racing+Sans+One&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@400;500;700&display=swap');
+
 * {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  background-color: #ffffff;
+}
+
+/* ─── App Shell ─────────────────────────────────── */
 .app-container {
-  max-width: 400px;
+  max-width: 402px;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 20px;
+  background-color: #03292E;
+  padding: 32px 34px;
+  color: white;
+  position: relative;
 }
 
-/* Menu Screen */
-.menu-title {
+/* ─── Home Screen ────────────────────────────────── */
+.home-logo {
   text-align: center;
-  font-weight: bold;
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 2rem;
+  margin-bottom: 28px;
+  color: white;
+}
+
+.home-welcome {
+  font-size: 0.85rem;
+  font-weight: 100;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.home-username {
+  font-size: 1.4rem;
+  font-weight: 700;
   margin-bottom: 40px;
+  color: white;
 }
 
+.home-section-label {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+
+/* Exercise Cards */
 .exercise-card {
-  background-color: #e0e0e0;
-  border-radius: 20px;
-  padding: 30px;
-  margin-bottom: 20px;
-  text-align: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 22px 20px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.exercise-card h2 {
-  font-weight: bold;
-  margin-bottom: 15px;
+.exercise-card-info h2 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  margin-bottom: 3px;
 }
 
-.start-btn {
-  background-color: white;
+.exercise-card-info span {
+  font-size: 0.72rem;
+  font-weight: 100;
+  color: #000000;
+}
+
+.continue-btn {
+  background-color: #EEE52D;
   border: none;
   border-radius: 20px;
-  padding: 10px 30px;
-  font-size: 1rem;
+  padding: 8px 18px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0d2b28;
   cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
 }
 
-/* Back Button */
+.continue-btn:hover {
+  opacity: 0.85;
+}
+
+/* ─── Exercise Screens ───────────────────────────── */
 .back-btn {
   background: none;
-  border: 1px solid #ccc;
+  border: 1.5px solid rgba(255,255,255,0.4);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
   cursor: pointer;
-  margin-bottom: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: border-color 0.15s;
 }
 
-/* Exercise Screens */
+.back-btn:hover {
+  border-color: white;
+}
+
 .exercise-title {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 36px;
   text-align: center;
+  color: white;
 }
 
+/* ─── Circle Progress ────────────────────────────── */
 .circle-container {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .circle-svg {
@@ -74,53 +142,131 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
 }
 
-/* Repetition Buttons */
+/* ─── Repetition Controls ────────────────────────── */
 .rep-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  margin-top: 40px;
+  gap: 28px;
+  margin-top: 8px;
 }
 
 .rep-count {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  min-width: 28px;
+  text-align: center;
 }
 
 .circle-btn {
-  background-color: #e0e0e0;
+  background-color: #ffffff;
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   font-size: 1.5rem;
   cursor: pointer;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
 }
 
-/* Duration Buttons */
+.circle-btn:hover {
+  background-color: #1f5048;
+  color: white;
+}
+
+/* ─── Duration Controls ──────────────────────────── */
 .duration-controls {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 40px;
+  margin-top: 8px;
 }
 
 .duration-controls-reset {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .pill-btn {
-  background-color: #e0e0e0;
-  border: none;
+  background: white;
+  border: 1.5px solid rgba(255,255,255,0.5);
   border-radius: 20px;
-  padding: 10px 25px;
-  font-size: 1rem;
+  padding: 10px 28px;
+  font-size: 0.9rem;
+  font-weight: 500;
   cursor: pointer;
+  color: black;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.pill-btn:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: white;
+  color: white;
+}
+
+/* ─── Max Lift (Bench Press) Screen ─────────────── */
+.unit-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+.unit-btn {
+  border-radius: 20px;
+  padding: 7px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.unit-btn.active {
+  background-color: #EEE52D;
+  color: #0d2b28;
+}
+
+.unit-btn.inactive {
+  background-color: #163c38;
+  color: #a0c4b8;
+}
+
+.lift-section {
+  margin-bottom: 32px;
+}
+
+.lift-label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.lift-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.lift-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  min-width: 48px;
+  text-align: center;
 }

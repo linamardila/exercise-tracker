@@ -44,8 +44,8 @@ function DurationExercise({ name, duration = 30 }) {
       <h2 className="exercise-title">{name}</h2>
       <div className="circle-container">
         <svg className="circle-svg" width="220" height="220">
-          <circle cx="110" cy="110" r={radius} fill="none" stroke="#e0e0e0" strokeWidth="18" />
-          <circle cx="110" cy="110" r={radius} fill="none" stroke="#aaa" strokeWidth="18"
+          <circle cx="110" cy="110" r={radius} fill="none" stroke="#1f4a44" strokeWidth="18" />
+          <circle cx="110" cy="110" r={radius} fill="none" stroke="#EEE52D" strokeWidth="18"
             strokeDasharray={circumference} strokeDashoffset={offset} strokeLinecap="round" />
         </svg>
         <div className="circle-text">{minutes}:{pad(displaySeconds)}</div>
