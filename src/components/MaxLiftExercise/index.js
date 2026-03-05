@@ -30,9 +30,19 @@ function MaxLiftExercise({ name }) {
       <div className="lift-section">
         <div className="lift-label">Weight</div>
         <div className="lift-counter">
-          <button className="circle-btn" onClick={() => setWeight(w => Math.max(0, w - 5))}>−</button>
+          <button
+            className="circle-btn"
+            onClick={() => setWeight((w) => Math.max(0, w - 5))}
+          >
+            −
+          </button>
           <span className="lift-value">{weight}</span>
-          <button className="circle-btn" onClick={() => setWeight(w => w + 5)}>+</button>
+          <button
+            className="circle-btn"
+            onClick={() => setWeight((w) => w + 5)}
+          >
+            +
+          </button>
         </div>
       </div>
 
@@ -40,10 +50,28 @@ function MaxLiftExercise({ name }) {
       <div className="lift-section">
         <div className="lift-label">Reps</div>
         <div className="lift-counter">
-          <button className="circle-btn" onClick={() => setReps(r => Math.max(0, r - 1))}>−</button>
+          <button
+            className="circle-btn"
+            onClick={() => setReps((r) => Math.max(0, r - 1))}
+          >
+            −
+          </button>
           <span className="lift-value">{reps}</span>
-          <button className="circle-btn" onClick={() => setReps(r => r + 1)}>+</button>
+          <button className="circle-btn" onClick={() => setReps((r) => r + 1)}>
+            +
+          </button>
         </div>
+      </div>
+      <div className="duration-controls-reset">
+        <button
+          className="pill-btn"
+          onClick={() => {
+            setWeight(0);
+            setReps(0);
+          }}
+        >
+          Reset
+        </button>
       </div>
     </div>
   );

@@ -15,10 +15,19 @@ function RepetitionExercise({ name }) {
       <div className="circle-container">
         <svg className="circle-svg" width="240" height="240">
           {/* Track */}
-          <circle cx="120" cy="120" r={radius} fill="none" stroke="#1f4a44" strokeWidth="20" />
+          <circle
+            cx="120"
+            cy="120"
+            r={radius}
+            fill="none"
+            stroke="#1f4a44"
+            strokeWidth="20"
+          />
           {/* Progress */}
           <circle
-            cx="120" cy="120" r={radius}
+            cx="120"
+            cy="120"
+            r={radius}
             fill="none"
             stroke="#EEE52D"
             strokeWidth="20"
@@ -27,12 +36,26 @@ function RepetitionExercise({ name }) {
             strokeLinecap="round"
           />
         </svg>
-        <div className="circle-text">{count}/{goal}</div>
+        <div className="circle-text">
+          {count}/{goal}
+        </div>
       </div>
       <div className="rep-controls">
-        <button className="circle-btn" onClick={() => setCount(Math.max(0, count - 1))}>−</button>
+        <button
+          className="circle-btn"
+          onClick={() => setCount(Math.max(0, count - 1))}
+        >
+          −
+        </button>
         <span className="rep-count">{count}</span>
-        <button className="circle-btn" onClick={() => setCount(count + 1)}>+</button>
+        <button className="circle-btn" onClick={() => setCount(count + 1)}>
+          +
+        </button>
+      </div>
+      <div className="duration-controls-reset">
+        <button className="pill-btn" onClick={() => setCount(0)}>
+          Reset
+        </button>
       </div>
     </div>
   );
